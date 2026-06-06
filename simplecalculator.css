@@ -1,0 +1,119 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(169, 169, 169);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calc{
+    background-color: black;
+    border: 2px solid whitesmoke;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.5);
+    padding: 20px;
+    
+}
+.calc form {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 12px;
+    
+}
+.maininput{
+    grid-column: span 4;
+    font-size: 3rem;
+    color: whitesmoke;
+    font-weight: 400;
+    background-color: black;
+    border: 1px solid gray;
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+.numbtn, .calbtn, .equal, .clear{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.numbtn {
+    background-color: gray;
+    color: black;
+}
+.numbtn:hover{
+    background-color: rgb(169, 169, 169);
+    color: whitesmoke;
+}
+
+.calbtn {
+    background-color: #222;
+    color: #1cdf9a;
+}
+
+.calbtn:hover {
+    background-color:rgb(169, 169, 169);
+    color: whitesmoke;
+}
+/* زر المساواة */
+.equal {  
+    background-color: #14996a;
+    color: white;
+}
+
+.equal:hover {
+    background-color: rgb(169, 169, 169);
+    color: whitesmoke;
+}
+
+
+.clear {
+    background-color: #222;
+    color: red;
+}
+
+.clear:hover {
+    background-color: rgb(169, 169, 169);
+    color: whitesmoke;
+}
+
+/* 📱 شاشات الهواتف الصغيرة جداً (أقل من 360 بكسل) */
+@media (max-width: 360px) {
+    .calc {
+        padding: 12px;
+    }
+    .calc form {
+        gap: 8px;
+    }
+    .maininput {
+        font-size: 2.2rem;
+        height: 80px;
+    }
+    .numbtn, .calbtn, .equal, .clear {
+        font-size: 1.2rem;
+    }
+}
